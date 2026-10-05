@@ -7,7 +7,7 @@
  *  - poll: the question and the sounds. Put the sound files in the audio folder and list them here.
  */
 window.POLL_CONFIG = {
-  backendUrl: "",
+  backendUrl: "https://script.google.com/macros/s/AKfycbwZJ8Xf9uosYUALnrqPgeiXtS0dw0UFA_yNpssBaYfAmkITGVv2xBTy2teVERC0rOdeqA/exec",
 
   poll: {
     // Letters, numbers, - and _ only. Use a new id for each new poll so the votes do not mix.
