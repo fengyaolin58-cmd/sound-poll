@@ -16,6 +16,7 @@
   document.title = "Results: " + poll.title;
   $("title").textContent = poll.title;
   $("description").textContent = poll.description || "";
+  $("description").hidden = !poll.description;
 
   // Small play buttons, so the sounds can be heard from here too.
   var bank = P.AudioBank(poll.options, {

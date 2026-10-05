@@ -21,6 +21,7 @@
   document.title = poll.title;
   $("title").textContent = poll.title;
   $("description").textContent = poll.description || "";
+  $("description").hidden = !poll.description;
 
   // ------------------------------------------------------------ the list of sounds
 
