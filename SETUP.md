@@ -20,15 +20,18 @@ stored in your own browser only and a yellow banner says so. Add `?demo=seed` to
 
 ## 1. Use your own sounds
 
-The five sounds in `audio/` are **placeholders** I generated so the page works. Replace them:
+The five sounds in `audio/` are your Blink sounds (Blink = Sound A, Blink 2 = B, Blink 3 = C, blink 4 = D,
+Blink 5 = E). Your original files were very quiet and differed in loudness by up to 14 dB, so the copies
+in the poll were made louder to the same average level (the originals were not touched). To use
+different sounds:
 
 1. Put your five files in the `audio` folder. `.mp3` and `.wav` play in every browser; `.ogg` may not
    play on older iPhones. Keep each file short and small (under 1 MB is plenty).
 2. Open `config.js` in Notepad and edit the `poll` part:
    - `title` and `description` are what people read.
    - For each option: `label` is the name people see, `file` is the path (for example
-     `audio/slash-1.mp3`), and `note` is an optional line under the name. **Delete or change the
-     "Placeholder: ..." notes.** Leave the `id` letters alone.
+     `audio/slash-1.mp3`), and `note` is an optional line under the name (the Blink sounds have none).
+     Leave the `id` letters alone.
    - You can have more or fewer than five options; the page adapts. Number keys 1 to 9 play the first nine.
 3. Set the loudness of all your sounds to about the same level before you export them. People vote
    for whatever sounds louder, and that is not what you want to measure. (Audacity: Effect >
@@ -58,8 +61,8 @@ You need a Google account. This is the one step I could not do for you.
 6. Copy the **Web app URL**. It ends in `/exec`.
 7. Open `config.js` and paste it between the quotes: `backendUrl: "https://script.google.com/macros/s/.../exec",`
 8. Check it works: paste that same URL into a browser tab and add
-   `?action=results&poll=sword-slash-1` at the end (use your poll's `id`). You should see something like
-   `{"ok":true,"poll":"sword-slash-1","counts":{},"total":0,"myVote":null}`. If you see a Google sign-in
+   `?action=results&poll=blink-sfx-1` at the end (use your poll's `id`). You should see something like
+   `{"ok":true,"poll":"blink-sfx-1","counts":{},"total":0,"myVote":null}`. If you see a Google sign-in
    page or an error page instead, step 4 was not set to "Anyone".
 
 A **Votes** tab appears in your sheet when the first vote comes in. It has one row per voter:
@@ -121,7 +124,7 @@ minute or two.
 - **Limits.** Google's free script quotas are generous and a poll with some hundreds of voters is no
   problem. If a post goes very big, votes may fail for a while; people see "Could not reach the vote
   counter" and can try again. Your already-saved votes are safe in the sheet.
-- **The sounds load when the page opens** (about 0.25 MB for the five placeholders), so every sound
+- **The sounds load when the page opens** (about 0.6 MB for the five Blink sounds), so every sound
   plays the moment it is tapped. Large files will make the page slower to ready on mobile data.
 - If nobody can vote and the page says "The vote counter did not answer", open the `/exec` address
   from step 2.8 in a browser: if that does not show the `{"ok":true...` text, the deployment settings

@@ -11,9 +11,9 @@ window.POLL_CONFIG = {
 
   poll: {
     // Letters, numbers, - and _ only. Use a new id for each new poll so the votes do not mix.
-    id: "sword-slash-1",
+    id: "blink-sfx-1",
 
-    title: "Which sword slash sounds best?",
+    title: "Which blink sound effect is best?",
     description: "Listen to all five, then pick your favourite. Headphones help.",
 
     // true = voting is switched off (the results still show).
@@ -27,11 +27,11 @@ window.POLL_CONFIG = {
     // Each option needs an id (letters, numbers, - and _), a name people see, and the sound file.
     // "note" is an optional line under the name. mp3 and wav play everywhere.
     options: [
-      { id: "a", label: "Sound A", note: "Placeholder: quick, bright swoosh",  file: "audio/sfx-a.wav" },
-      { id: "b", label: "Sound B", note: "Placeholder: metallic clang",         file: "audio/sfx-b.wav" },
-      { id: "c", label: "Sound C", note: "Placeholder: heavy whoosh and thump", file: "audio/sfx-c.wav" },
-      { id: "d", label: "Sound D", note: "Placeholder: sharp zing",             file: "audio/sfx-d.wav" },
-      { id: "e", label: "Sound E", note: "Placeholder: retro chirp",            file: "audio/sfx-e.wav" }
+      { id: "a", label: "Sound A", file: "audio/sfx-a.wav" },
+      { id: "b", label: "Sound B", file: "audio/sfx-b.wav" },
+      { id: "c", label: "Sound C", file: "audio/sfx-c.wav" },
+      { id: "d", label: "Sound D", file: "audio/sfx-d.wav" },
+      { id: "e", label: "Sound E", file: "audio/sfx-e.wav" }
     ]
   },
 
