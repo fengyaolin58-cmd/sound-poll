@@ -1,0 +1,40 @@
+/*
+ * Everything you normally need to change is in this file.
+ *
+ *  - backendUrl: where the votes are stored. Leave it "" to try the site out: the votes then stay in
+ *    your own browser only. For a real poll, follow SETUP.md (a Google Sheet plus a small script, free)
+ *    and paste the web app address between the quotes.
+ *  - poll: the question and the sounds. Put the sound files in the audio folder and list them here.
+ */
+window.POLL_CONFIG = {
+  backendUrl: "",
+
+  poll: {
+    // Letters, numbers, - and _ only. Use a new id for each new poll so the votes do not mix.
+    id: "sword-slash-1",
+
+    title: "Which sword slash sounds best?",
+    description: "Listen to all five, then pick your favourite. Headphones help.",
+
+    // true = voting is switched off (the results still show).
+    closed: false,
+
+    // When the results appear on the voting page: "after-vote", "always" or "never".
+    // (results.html always shows them. It is not linked from the voting page, but anyone who knows
+    // its address can open it, so keep that address to yourself if the results must stay hidden.)
+    showResults: "after-vote",
+
+    // Each option needs an id (letters, numbers, - and _), a name people see, and the sound file.
+    // "note" is an optional line under the name. mp3 and wav play everywhere.
+    options: [
+      { id: "a", label: "Sound A", note: "Placeholder: quick, bright swoosh",  file: "audio/sfx-a.wav" },
+      { id: "b", label: "Sound B", note: "Placeholder: metallic clang",         file: "audio/sfx-b.wav" },
+      { id: "c", label: "Sound C", note: "Placeholder: heavy whoosh and thump", file: "audio/sfx-c.wav" },
+      { id: "d", label: "Sound D", note: "Placeholder: sharp zing",             file: "audio/sfx-d.wav" },
+      { id: "e", label: "Sound E", note: "Placeholder: retro chirp",            file: "audio/sfx-e.wav" }
+    ]
+  },
+
+  // How often results.html refreshes by itself, in seconds.
+  refreshSeconds: 15
+};

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sound poll</title>
+  <meta name="description" content="Listen to the sounds and vote for your favourite.">
+  <meta name="theme-color" content="#0e1126">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23171b36' stroke='%234fe0c0' stroke-width='2'/%3E%3Cpath d='M12 9l12 7-12 7z' fill='%234fe0c0'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="head">
+      <h1 id="title">Loading the poll…</h1>
+      <p id="description" class="lead"></p>
+    </header>
+
+    <div id="banner" class="banner" hidden></div>
+
+    <section aria-labelledby="listen-title">
+      <div class="listen-head">
+        <h2 id="listen-title">Listen, then pick one</h2>
+        <button id="play-all" class="ghost" type="button">&#9654; Play all in order</button>
+      </div>
+      <ul id="options" class="options"></ul>
+      <p class="tip">Tip: press the number keys to play the sounds, and Esc to stop.</p>
+    </section>
+
+    <div class="vote-bar">
+      <button id="submit" class="primary" type="button" disabled>Pick a sound to vote</button>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </div>
+
+    <section id="results" class="results" hidden aria-labelledby="results-title">
+      <div class="results-head">
+        <h2 id="results-title">Results</h2>
+        <span id="results-total" class="muted"></span>
+      </div>
+      <ul id="results-list" class="results-list"></ul>
+      <p class="results-foot">
+        <button id="change-vote" class="link" type="button" hidden>Change my vote</button>
+        <span id="results-updated" class="muted"></span>
+      </p>
+    </section>
+
+    <footer class="foot">Made for the game's sound effect vote. One vote per person, please.</footer>
+  </main>
+
+  <noscript><p class="noscript">This poll needs JavaScript to play the sounds and count the votes.</p></noscript>
+  <script src="config.js"></script>
+  <script src="js/poll.js"></script>
+  <script src="js/vote-page.js"></script>
+</body>
+</html>
