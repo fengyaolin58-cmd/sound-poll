@@ -11,7 +11,7 @@ window.POLL_CONFIG = {
 
   poll: {
     // Letters, numbers, - and _ only. Use a new id for each new poll so the votes do not mix.
-    id: "blink-sfx-1",
+    id: "blink-sfx-2",
 
     title: "Which teleport sound sounds the coolest?",
     description: "",
