@@ -13,8 +13,8 @@ window.POLL_CONFIG = {
     // Letters, numbers, - and _ only. Use a new id for each new poll so the votes do not mix.
     id: "blink-sfx-1",
 
-    title: "Which blink sound effect is best?",
-    description: "Listen to all five, then pick your favourite. Headphones help.",
+    title: "Which teleport sound sounds the coolest?",
+    description: "",
 
     // true = voting is switched off (the results still show).
     closed: false,
